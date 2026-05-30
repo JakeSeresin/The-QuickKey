@@ -431,17 +431,17 @@ body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: var(--sp-4) var(--sp-6) var(--sp-6);
+  padding: var(--sp-5) var(--sp-6) var(--sp-6);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: var(--sp-4);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   align-content: start;
   scroll-behavior: smooth;
 }
 
 .shortcut-grid.list-view {
   grid-template-columns: 1fr;
-  gap: 4px;
+  gap: 8px;
 }
 
 .shortcut-grid::-webkit-scrollbar { width: 4px; }
@@ -470,7 +470,7 @@ body {
   cursor: default;
   animation: cardIn 0.22s var(--ease-snap) both;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   min-height: 96px;
 }
 
@@ -505,9 +505,9 @@ body {
   min-height: unset;
   animation: none;
 }
-.list-view .shortcut-card .shortcut-info { flex: 1; }
-.list-view .shortcut-card .shortcut-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.list-view .shortcut-card .shortcut-desc  { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.list-view .shortcut-card .shortcut-info { flex: 1; min-width: 0; }
+.list-view .shortcut-card .shortcut-title { white-space: normal; overflow: visible; text-overflow: unset; }
+.list-view .shortcut-card .shortcut-desc  { white-space: normal; overflow: visible; text-overflow: unset; }
 .list-view .shortcut-card .card-right { width: auto; flex: 0; margin-top: 0; }
 .list-view .shortcut-card .card-right .keys { flex: unset; }
 .list-view .shortcut-card:hover { transform: translateX(2px); }
@@ -545,6 +545,8 @@ body {
   color: var(--tx-primary);
   white-space: normal;
   overflow: visible;
+  text-overflow: unset;
+  word-break: break-word;
   line-height: 1.35;
 }
 
@@ -553,7 +555,9 @@ body {
   color: var(--tx-secondary);
   white-space: normal;
   overflow: visible;
-  line-height: 1.4;
+  text-overflow: unset;
+  word-break: break-word;
+  line-height: 1.5;
 }
 
 /* Bottom row: keys + action buttons */
@@ -719,8 +723,8 @@ kbd {
   display: flex;
   align-items: center;
   gap: var(--sp-3);
-  padding: var(--sp-2) 0 var(--sp-1) 0;
-  margin-top: var(--sp-2);
+  padding: var(--sp-3) 0 var(--sp-2) 0;
+  margin-top: var(--sp-4);
 }
 
 .category-divider:first-child { margin-top: 0; }
@@ -753,9 +757,13 @@ button:focus-visible, input:focus-visible {
 }
 
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .shortcut-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 720px) {
   .sidebar { width: 190px; min-width: 180px; }
-  .shortcut-grid { grid-template-columns: 1fr 1fr; padding: var(--sp-3) var(--sp-4) var(--sp-4); gap: var(--sp-3); }
+  .shortcut-grid { grid-template-columns: repeat(2, 1fr); padding: var(--sp-3) var(--sp-4) var(--sp-4); gap: 14px; }
 }
 
 @media (max-width: 560px) {
