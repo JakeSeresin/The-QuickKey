@@ -1,0 +1,109 @@
+{
+  "id": "/",
+  "name": "The QuickKey",
+  "short_name": "The QuickKey",
+  "description": "Advanced offline shortcut library with 100 shortcuts across Windows 11, VS Code, Chrome, Excel, Photoshop, and Word.",
+  "version": "3.2.0",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "orientation": "any",
+  "theme_color": "#101316",
+  "background_color": "#f7f8fb",
+  "categories": [
+    "productivity",
+    "utilities",
+    "education"
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/screenshot-desktop.png",
+      "sizes": "1890x766",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "The QuickKey desktop view"
+    },
+    {
+      "src": "icons/screenshot-mobile.png",
+      "sizes": "315x475",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "The QuickKey mobile view"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Shortcuts",
+      "short_name": "Search",
+      "description": "Open The QuickKey with search focused.",
+      "url": "/?search=true",
+      "icons": [
+        {
+          "src": "icons/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Practice Mode",
+      "short_name": "Practice",
+      "description": "Open The QuickKey for shortcut practice.",
+      "url": "/?practice=true",
+      "icons": [
+        {
+          "src": "icons/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 440
+  },
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "handle_links": "preferred",
+  "capture_links": "none",
+  "related_applications": []
+}
