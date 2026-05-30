@@ -79,7 +79,7 @@
     { id: 'win20', category: 'Windows 11', title: 'Connect Display',         keys: ['Win', 'P'],               description: 'Choose a display / projection mode' },
 
     // ── VS Code – NEW (10) ───────────────────────────────────
-    { id: 'code11', category: 'VS Code', title: 'Split Editor',           keys: ['Ctrl', '\'],              description: 'Split the editor vertically' },
+    { id: 'code11', category: 'VS Code', title: 'Split Editor',           keys: ['Ctrl', '\\'],              description: 'Split the editor vertically' },
     { id: 'code12', category: 'VS Code', title: 'Close Editor',           keys: ['Ctrl', 'W'],               description: 'Close the active editor tab' },
     { id: 'code13', category: 'VS Code', title: 'Reopen Closed Editor',   keys: ['Ctrl', 'Shift', 'T'],      description: 'Reopen the last closed editor tab' },
     { id: 'code14', category: 'VS Code', title: 'Find in Files',          keys: ['Ctrl', 'Shift', 'F'],      description: 'Search across all files in the workspace' },
